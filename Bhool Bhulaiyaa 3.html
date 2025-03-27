@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Video Player with Server Switch</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+
+    <div class="video-container">
+        <video id="videoPlayer" controls>
+            <source src="https://pixeldra.in/api/file/b21wg5Xj?download" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Server Switch -->
+        <div class="server-switch">
+            <label for="serverSelect">Switch Server:</label>
+            <select id="serverSelect">
+                <option value="server1/video.mp4">Server 1</option>
+                <option value="server2/video.mp4">Server 2</option>
+                <option value="server3/video.mp4">Server 3</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        const videoPlayer = document.getElementById("videoPlayer");
+        const serverSelect = document.getElementById("serverSelect");
+
+        serverSelect.addEventListener("change", () => {
+            const selectedSource = serverSelect.value;
+            videoPlayer.src = selectedSource;
+            videoPlayer.play(); // Auto-play after switching
+        });
+    </script>
+
+</body>
+</html>

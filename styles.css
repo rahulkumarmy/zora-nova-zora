@@ -1,0 +1,8 @@
+.hero {
+    background: url('hero-bg.jpg') center/cover no-repeat;
+    padding: 100px 0;
+}
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
